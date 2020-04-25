@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
+using MernisServiceReference;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,7 +19,8 @@ namespace Business.Concrete
         }
         public bool CheckPerson(Person person)
         {
-            return true;
+            KPSPublicSoapClient client = new KPSPublicSoapClient(KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap);
+            return client.TCKimlikNoDogrulaAsync(new TCKimlikNoDogrulaRequest(new TCKimlikNoDogrulaRequestBody(32419122936,"Eren","İNAL",1994))).Result.Body.TCKimlikNoDogrulaResult;
         }
     }
 }

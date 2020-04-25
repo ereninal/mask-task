@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Business.Concrete
 {
-    public class PttManager
+    public class PttManager :ISupplierService
     {
         private IApplicanService _applicanService;
         public PttManager( IApplicanService applicanService)
@@ -15,7 +15,7 @@ namespace Business.Concrete
         }
         public void GiveMask(Person person)
         {
-            if (personManager.CheckPerson(person))
+            if (_applicanService.CheckPerson(person))
             {
 
             }

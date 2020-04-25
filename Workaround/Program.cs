@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 
 namespace Workaround
 {
@@ -6,7 +7,9 @@ namespace Workaround
     {
         static void Main(string[] args)
         {
-            
+            Person person1 = new Person();
+            person1.FirstName = "Eren";
+            person1.LastName = "İNAL";
         }
     }
     public class Vatandas
