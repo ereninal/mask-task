@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Business.Abstract
 {
-    public interface IApplicanService//
+    public interface IApplicanService
     {
         void ApplyForMask(Person person);
         List<Person> GetList();

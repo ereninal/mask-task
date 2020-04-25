@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Business.Concrete;
+using Entities.Concrete;
 using System;
 
 namespace Workaround
@@ -8,15 +9,18 @@ namespace Workaround
         static void Main(string[] args)
         {
             Person person1 = new Person();
-            person1.FirstName = "Eren";
+            person1.FirstName = "EREN";
             person1.LastName = "İNAL";
+            person1.NationalIdenty = 32419122936;
+            person1.DateOfBirthday = 1994;
+            PttManager pttManager = new PttManager(new PersonManager());
+            pttManager.GiveMask(person1);
+            Console.ReadLine();
+            //TODO: webapi yazılacak.
         }
     }
-    public class Vatandas
-    {
-        public string Ad { get; set; }
-        public string Soyad { get; set; }
-        public int DogumYili { get; set; }
-        public long TcNo { get; set; }
-    }
+    
+
+
+
 }
