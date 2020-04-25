@@ -6,7 +6,7 @@ namespace Workaround
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
         }
     }
     public class Vatandas
