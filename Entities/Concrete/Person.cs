@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Entities.Concrete
 {
-    internal class Person
+    public class Person
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public long NationalIdenty { get; set; }
+        public int DateOfBirthday { get; set; }
     }
 }
